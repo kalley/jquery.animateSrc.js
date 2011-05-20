@@ -4,7 +4,7 @@
         return (new Array(length - String(n).length + 1)).join("0").concat(n);
     }
     
-    var intervals = {};
+    var intervals = {}, i = 1;
     
     $.fn.animateSrc = function(options) {
         
@@ -14,15 +14,19 @@
             from: 'inherit',
             padding: 2,
             path: '',
+            prefix: 'animate-src-',
             to: 0,
             complete: function() {},
             step: function() {}
         };
         
         return this.each(function() {
+            if( ! this.id) {
+                this.id = opts.prefix+(i++);
+            }
             var startTime = $.now(),
             img = $(this),
-            self = img.data('name'), clear = true,
+            self = this.id, clear = true,
             opts = $.extend({}, settings, options),
             totalImages;
             if(intervals[self]) {
