@@ -7,6 +7,7 @@ It still needs some work (possibly using jQuery.fx.custom), but for now it does 
 ## Updates
 
 June 22, 2011:
+
 * Duration is now calculated based on the number of images and assuming a 2 fps frame-rate.
 * You can now load it without starting it using the `autostart` parameter set to false.
   * You can then start it by doing $('#div').animateSrc('start');
