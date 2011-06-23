@@ -11,7 +11,7 @@ June 22, 2011:
 * Duration is now calculated based on the number of images and assuming a 2 fps frame-rate.
 * You can now load it without starting it using the `autostart` parameter set to false.
   * You can then start it by doing $('#div').animateSrc('start');
-* New events are supported: `imagesLoaded` which is called after the images are loaded and `before` (which is before the sequence starts.
+* New events are supported: `imagesLoaded` which is called after the images are loaded and `before` which is before the sequence starts.
 * Uses `RequestAnimationFrame` when available
 * Can now easily reset global settings by doing `$.fn.animateSrc.settings.padding = 5;`.
 * You can tell it you want the sequence to loop with the `loop` parameter.
