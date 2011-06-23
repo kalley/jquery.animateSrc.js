@@ -15,6 +15,7 @@ June 22, 2011:
 * Uses `RequestAnimationFrame` when available
 * Can now easily reset global settings by doing `$.fn.animateSrc.settings.padding = 5;`.
 * You can tell it you want the sequence to loop with the `loop` parameter.
+* Preloads images now, even if you already have.
 
 ## Usage
 
@@ -35,6 +36,3 @@ Where `#div` is the container that will hold the images. This is going to look f
     });
 
 And that would look for img/man_00.png (.png is the default ext, default padding is 2), img/man_01.png, etc.
-
-**NOTE** If you need to preload images, you are in charge of that.  This plugin does not preload images, and there's no plan to make it so.
-
